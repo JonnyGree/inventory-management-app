@@ -1,5 +1,21 @@
+CLIENT
 npx create-next-app@latest
 npm i @mui/x-data-grid @mui/material @emotion/react @emotion/style lucide-react numeral recharts uuid axios
 npm i -D @types/node @types/uuid @types/numeral
 npm i -D tw-colors
 npm i react-redux @reduxjs/toolkit dotenv redux-persist
+
+
+SERVER
+npm init -y
+npm i prisma @prisma/client
+npx prisma init
+npm install typescript
+npx tsc --init
+npm i -D ts-node typescript @types/node
+npx prisma generate
+npx prisma migrate dev --name init
+npm run seed
+npm i express body-parser cors dotenv helmet morgan concurrently
+npm i -D nodemon @types/cors @types/express @types/morgan
+npm i rimraf
